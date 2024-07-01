@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #333;
+    }
+
+    .navigation {
+        position: fixed;
+        width: calc(100% - 40px);
+        background-color: #2c3e50;
+        padding: 1rem 0;
+        color: white;
+        padding: 20px;
+    }
+
+    .navigation .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .navigation .navigation-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigation .navigation-links a {
+        text-decoration: none;
+        color: white;
+    }
+
+    header {
+        background: #18bc9c;
+        color: white;
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    header .button {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        background: #2c3e50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        overflow-x: auto;
+    }
+
+    section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .portfolio-item {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .divider-custom {
+        margin: 1.25rem 0 1.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .divider-custom .divider-custom-line {
+        width: 100%;
+        max-width: 7rem;
+        height: 0.25rem;
+        background-color: #2c3e50;
+        border-radius: 1rem;
+        border-color: #2c3e50;
+    }
+    .divider-custom .divider-custom-icon {
+        color: #2c3e50;
+        font-size: 2rem;
+        height: 50px;
+        width: 50px;
+    }
+    
+    .avatar{
+        width: 15rem;
+    }
+
+    .about-text{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 60%;
+        margin-left:  250px;
+        margin-right: 250px;
+    }
+    .about-elem{
+        width: 300px;
+        text-align: start;
+        letter-spacing: 1px;
+    }
+
+    .projectModal{
+        position: fixed;
+        background-color: white;
+        top: 100px;
+    }
+    .projectModal[ishidden=yes]{
+        display: none;
+    }
+</style>
+
+<body>
+    <nav class="navigation">
+        <div class="container">
+            <a class="logo">START BOOTSTRAP</a>
+            <ul class="navigation-links">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header>
+
+        <div class="container">
+            <img class="avatar mb-5" src="./img/avataaars.svg" alt="...">
+            <h1>START BOOTSTRAP</h1>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com --></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p>Graphic Artist - Web Designer - Illustrator</p>
+        </div>
+    </header>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com --></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="container">
+            <div class="portfolio-grid">
+                <div onclick="showModal(this)" class="portfolio-item">
+                    <img src="img/cabin.png" alt="Project 1">
+                </div>
+                <div onclick="showModal(this)" class="portfolio-item">
+                    <img src="img/cake.png" alt="Project 2">
+                </div>
+                <div onclick="showModal(this)" class="portfolio-item">
+                    <img src="img/circus.png" alt="Project 3">
+                </div>
+                <div onclick="showModal(this)" class="portfolio-item">
+                    <img src="img/game.png" alt="Project 3">
+                </div>
+                <div onclick="showModal(this)" class="portfolio-item">
+                    <img src="img/safe.png" alt="Project 3">
+                </div>
+                <div onclick="showModal(this)" class="portfolio-item">
+                    <img src="img/submarine.png" alt="Project 3">
+                </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            
+            <div class="about-text">
+                <div class="about-elem elem-1">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</div>
+                <div class="about-elem elem-2">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</div>                
+            </div>
+
+        </div>
+    </section>
+    <div class="projectModal" ishidden="yes">
+        qefjkwjrkkt
+    </div>
+    <div class="modal-content projectModal"  ishidden="yes">
+        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body text-center pb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- Portfolio Modal - Title-->
+                        <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><svg class="svg-inline--fa fa-star" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg><!-- <i class="fas fa-star"></i> Font Awesome fontawesome.com --></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- Portfolio Modal - Image-->
+                        <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="...">
+                        <!-- Portfolio Modal - Text-->
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <button class="btn btn-primary" data-bs-dismiss="modal">
+                            <svg class="svg-inline--fa fa-xmark fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path></svg><!-- <i class="fas fa-xmark fa-fw"></i> Font Awesome fontawesome.com -->
+                            Close Window
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Freelancer. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let projectModal = document.querySelector(".projectModal");
+        function showModal(elem){
+            if(projectModal.getAttribute("ishidden")==="yes"){
+                projectModal.setAttribute("ishidden", "no");
+            }
+            else{
+                projectModal.setAttribute("ishidden", "yes");
+            }
+        }
+    </script>
+</body>
+
+</html>
